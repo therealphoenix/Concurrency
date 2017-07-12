@@ -16,11 +16,15 @@ import org.apache.log4j.Logger;
  */
 public class XmlFileReader implements Runnable {
 	private static final Logger logger = Logger.getLogger(XmlFileReader.class);
-	public static final String NEW_FILEWALK_THREAD_START = "Starting new filewalk thread - ";
+	private static final String NEW_FILEWALK_THREAD_START = "Starting new filewalk thread - ";
+	private static final String INITIALIZATION_MESSAGE_EXCEPTION = "Cannot initialize filereader.Invalid path.";
 	private String filePath;
 	private Path directory;
 	
 	public XmlFileReader(String filePath) {
+		if(null == filePath || filePath.isEmpty() ) {
+			throw new IllegalArgumentException(INITIALIZATION_MESSAGE_EXCEPTION);
+		}
 		this.filePath = filePath;
 	}
 
