@@ -7,7 +7,7 @@ import java.util.concurrent.Future;
 
 import org.apache.log4j.Logger;
 
-class Server implements RequestListener {
+public class Server implements RequestListener {
 	private static final Logger logger = Logger.getLogger(Server.class);
 	private static final String INVALID_REQUEST_EXCEPTION_MESSAGE = "Invalid request parameters.";
 	private static final String UNSUCCESSFUL_OPERATION_MESSAGE = "Cannot perform this operation.";

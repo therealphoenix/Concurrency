@@ -21,8 +21,8 @@ public class FileVisitor extends SimpleFileVisitor<Path> {
 	private static final String XML_EXTENSION = "xml";
 	private static final String EXCEPTION_MESSAGE = "Cannot read extension from this file path.";
 	private static final int VALID_EXTENSION_SIZE = 3;
-	Requester requester; 
-	Server server;
+	private final Requester requester; 
+	private final Server server;
 	
 	public FileVisitor() {
 		requester = new Requester();
