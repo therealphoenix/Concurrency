@@ -2,19 +2,19 @@
 <suite name="task3tests" parallel="false">
     <test name="xml-test" preserve-order="true" >
        <classes>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.AddBookTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.BanUserTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.UnbanUserTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.CommandTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.DeleteBookByIdTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.FindByTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.GetAllTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.GiveAdminRoleTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.MarkIssuanceTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.MarkReturnTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.RemoveAdminRoleTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.SetBookDeprecatedTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.UpdateDescriptionTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.AddBookRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.BanUserRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.UnbanUserRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.CommandRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.DeleteBookByIdRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.FindByRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.GetAllRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.GiveAdminRoleRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.MarkIssuanceRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.MarkReturnRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.RemoveAdminRoleRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.SetBookDeprecatedRequestTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.UpdateDescriptionRequestTest"></class>
           </classes>
     </test>
 </suite>

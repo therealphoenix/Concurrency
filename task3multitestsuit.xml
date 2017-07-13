@@ -2,9 +2,9 @@
 <suite name="task3tests" parallel="classes" thread-count="3">
     <test name="xml-test" preserve-order="true">
          <classes>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.BanUserTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.GetAllTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.controller.test.FindByTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.BanUserTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.GetAllTest"></class>
+         <class name = "com.klindziuk.offlinelibrary.server.test.FindByTest"></class>
          </classes>
     </test>
 </suite>
