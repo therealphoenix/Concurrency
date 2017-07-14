@@ -11,13 +11,12 @@ import org.apache.log4j.Logger;
 /**
  * @author Pavel_Klindziuk
  * Read files from specified directories
- * with specified charset readers
  * using java.nio.SimpleFileReader<T>
  */
 public class XmlFileReader implements Runnable {
 	private static final Logger logger = Logger.getLogger(XmlFileReader.class);
 	private static final String NEW_FILEWALK_THREAD_START = "Starting new filewalk thread - ";
-	private static final String INITIALIZATION_MESSAGE_EXCEPTION = "Cannot initialize filereader.Invalid path.";
+	private static final String INITIALIZATION_MESSAGE_EXCEPTION = "Cannot initialize filewalker.Invalid path.";
 	private String filePath;
 	private Path directory;
 	
