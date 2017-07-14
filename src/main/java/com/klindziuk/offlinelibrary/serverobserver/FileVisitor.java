@@ -31,7 +31,7 @@ public class FileVisitor extends SimpleFileVisitor<Path> {
 	}
 
 	/*
-	 * read files in current directory and with specified charset reader
+	 * read files in current directory and sending reaquests
 	 * 
 	 * @ param Path file
 	 * @ param BasicFileAttributes attr
@@ -39,7 +39,8 @@ public class FileVisitor extends SimpleFileVisitor<Path> {
 	public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
 			if (attrs.isRegularFile() && checkFileXtension(file.getFileName().toString())) {
 			logger.info("Parsing file: " + file.getFileName());
-			String request = RequestParser.readFile(file.toAbsolutePath().toRealPath(LinkOption.NOFOLLOW_LINKS).toString());
+			String filename = file.toAbsolutePath().toRealPath(LinkOption.NOFOLLOW_LINKS).toString();
+			String request = RequestParser.readFile(filename);
 			requester.sendRequest(request);
 		}
 		return FileVisitResult.CONTINUE;
