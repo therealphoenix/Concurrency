@@ -1,8 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="task3tests" parallel="false">
+<suite name="task3tests" parallel="classes" thread-count="10">
     <test name="xml-test" preserve-order="true" >
        <classes>
-         <class name = "com.klindziuk.offlinelibrary.server.test.AddBookRequestTest"></class>
          <class name = "com.klindziuk.offlinelibrary.server.test.BanUserRequestTest"></class>
          <class name = "com.klindziuk.offlinelibrary.server.test.UnbanUserRequestTest"></class>
          <class name = "com.klindziuk.offlinelibrary.server.test.CommandRequestTest"></class>
@@ -13,8 +12,6 @@
          <class name = "com.klindziuk.offlinelibrary.server.test.MarkIssuanceRequestTest"></class>
          <class name = "com.klindziuk.offlinelibrary.server.test.MarkReturnRequestTest"></class>
          <class name = "com.klindziuk.offlinelibrary.server.test.RemoveAdminRoleRequestTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.server.test.SetBookDeprecatedRequestTest"></class>
-         <class name = "com.klindziuk.offlinelibrary.server.test.UpdateDescriptionRequestTest"></class>
           </classes>
     </test>
 </suite>
