@@ -21,10 +21,9 @@ public class BaseRequestTest {
 	private static final Logger logger = Logger.getLogger(BaseRequestTest.class);
 	protected static final String XMLFILEPATH = "C:/Users/Pavel_Klindziuk/Program_Files/eclipse/Concurrency/requests/";
 	protected static final String SQLFILEPATH = "C:/Users/Pavel_Klindziuk/Program_Files/eclipse/Concurrency/sql/";
-	protected static final String START_PREPARING_MESSAGE = "Preparing test environment...";
 	protected static final String FINISH_PREPARING_MESSAGE = "Environment prepared successfully.";
+	protected static final String START_PREPARING_MESSAGE = "Preparing test environment...";
 	protected static final String PERFORMING_MESSAGE = "Performing test case from - ";
-	protected static final String TEST_FINISH_MESSAGE = "Tests runs are finished";
 	protected static final String EMPTY_STRING_EXCEPTION_MESSAGE = "Cannot perform this operation.Parameters cannot be null or empty.";
 	protected static final String SPEC_STRING_EXCEPTION_MESSAGE = "Cannot perform this operation.Only letters,dots,minus and whitespaces are allowed.";
 	protected static final String NUMBER_EXCEPTION_MESSAGE = "Cannot perform this operation.Only numbers allowed.Id cannot be zero.";
@@ -36,6 +35,7 @@ public class BaseRequestTest {
 		
 	@BeforeSuite
 	public void beforeSuit() throws ClassNotFoundException, SQLException {
+		logger.info(START_PREPARING_MESSAGE);
 		connector = DBconnector.getInstance();
 		connector.connect();
 		connection = connector.getJdbcConnection();
@@ -52,11 +52,10 @@ public class BaseRequestTest {
 		} catch (Exception e) {
 			/* ignored */ }
 		logger.info(FINISH_PREPARING_MESSAGE);
-	}
+		}
 	    	
 	@BeforeClass
 	public void beforeClass() throws ClassNotFoundException, SQLException {
-		logger.info(START_PREPARING_MESSAGE);
 		server = MultiServer.getInstance();
 		logger.info(server.getClass().getSimpleName() + " " + server.hashCode() + " instantiated.");
 		requester = new Requester();
@@ -65,13 +64,12 @@ public class BaseRequestTest {
 
 	@AfterClass
 	public void afterClass() {
-		logger.info(TEST_FINISH_MESSAGE);
+		requester = new Requester();
 	}
 	
 	@AfterSuite
 	public void afterSuit() {
 		connector = null;
-		logger.info(TEST_FINISH_MESSAGE);
 	}
 	
 	protected String setRequest(String xmlPath) {

@@ -4,7 +4,7 @@ import com.klindziuk.offlinelibrary.serverobserver.Server;
 
 /**
  * @author Pavel_Klindziuk
- * Initialize Singleton Server for every testing thread.
+ * Initialize Singleton server for every single testing thread.
  */
 public class MultiServer {
 	private static ThreadLocal<Server> threadServer = new ThreadLocal<Server>() {
